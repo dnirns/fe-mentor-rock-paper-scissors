@@ -1,14 +1,13 @@
-# Frontend Mentor - Rock, Paper, Scissors
+# Frontend Mentor Challenge - Rock, Paper, Scissors
 
-![Design preview for the Rock, Paper, Scissors coding challenge](./design/desktop-preview.jpg)
 
-## Welcome! 👋
+### My attempt at the Frontend Mentor 'Rock Paper Scissors Spock' challenge.
 
-Thanks for checking out this front-end coding challenge.
+[WIP Deployment Link](https://fe-mentor-rock-paper-scissors.vercel.app/)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges allow you to improve your skills in a real-life workflow.
+The original brief from Frontend Mentor is below:
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+
 
 ## The challenge
 
