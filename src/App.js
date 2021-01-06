@@ -40,6 +40,12 @@ const App = () => {
           </div>
         </div>
       </div>
+
+      <div className='button-container'>
+        <div className='button rules'>
+          <h3>RULES</h3>
+        </div>
+      </div>
     </div>
   )
 }

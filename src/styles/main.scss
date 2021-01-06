@@ -4,6 +4,7 @@ html {
   font-family: 'Barlow Semi Condensed', sans-serif;
   min-height: 100vh;
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  color: white;
 }
 
 .container {
@@ -11,6 +12,8 @@ html {
   height: 100%;
   flex-direction: column;
   align-items: center;
+  height: 90vh;
+  justify-content: space-evenly;
 }
 
 //* HEADER
@@ -59,7 +62,6 @@ header {
   justify-content: space-evenly;
   align-items: center;
   width: 500px;
-  border: 3px solid white;
   margin: 20px;
 }
 .option-border {
@@ -96,12 +98,26 @@ header {
   background: linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
 }
 
-//triangle backgground shape
+//triangle background shape
 .triangle-container {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+//* BUTTONS
+.button-container {
+  align-self: flex-end;
+  margin: 10px 40px;
+}
+.button {
+  font-weight: 600;
+  border: 2px solid white;
+  border-radius: 10px;
+  letter-spacing: 4px;
+  padding: 5px 30px;
+  line-height: 2px;
 }
 
 //* MEDIA QUERIES
@@ -117,6 +133,7 @@ header {
   .options {
     width: 90vw;
     max-width: 340px;
+    min-width: 270px;
   }
   .option {
     padding: 1.3em;
@@ -133,5 +150,11 @@ header {
   .score-box {
     padding: 4px 20px;
     font-size: 1.2em;
+  }
+}
+
+@media (max-width: 850px) {
+  .button-container {
+    align-self: center;
   }
 }
