@@ -14,14 +14,21 @@ const Modal = ({ openModal, closeModal, isModalOpen }) => {
             <div className='modal-header'>
               <h1>RULES</h1>
               <img
+                className='close-icon'
                 onClick={closeModal}
                 style={{ cursor: 'pointer' }}
                 src={closeIcon}
                 alt='close-icon'
               />
             </div>
-
             <img src={rulesImg} alt='game-rules' />
+            <img
+              className='close-icon-mobile'
+              onClick={closeModal}
+              style={{ cursor: 'pointer' }}
+              src={closeIcon}
+              alt='close-icon'
+            />
           </div>
         </div>
       </div>

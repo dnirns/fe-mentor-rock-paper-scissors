@@ -12,10 +12,11 @@ const App = () => {
 
   const handleOpenModal = () => {
     setModal(true)
+    console.log('Modal Opened')
   }
   const handleCloseModal = () => {
     setModal(false)
-    console.log('close being clicked')
+    console.log('Modal Closed')
   }
 
   return (

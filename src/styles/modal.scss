@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 
 .modal {
-  // display: block;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -36,4 +35,29 @@
 
 .rules-modal > img {
   padding: 50px 20px 10px 20px;
+}
+
+.close-icon {
+  display: block;
+}
+
+.close-icon-mobile {
+  display: none;
+}
+@media (max-width: 450px) {
+  .rules-modal {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .close-icon {
+    display: none;
+  }
+  .close-icon-mobile {
+    display: block;
+  }
 }
