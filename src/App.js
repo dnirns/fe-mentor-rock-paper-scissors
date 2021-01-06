@@ -1,6 +1,7 @@
 import rockIcon from './assets/icon-rock.svg'
 import paperIcon from './assets/icon-paper.svg'
 import scissorsIcon from './assets/icon-scissors.svg'
+import bgTriangle from './assets/bg-triangle.svg'
 
 const App = () => {
   return (
@@ -18,6 +19,9 @@ const App = () => {
       </header>
 
       <div className='options'>
+        <div className='triangle-container'>
+          <img className='triangle' src={bgTriangle} alt='background-shape' />
+        </div>
         <div className='option-border paper'>
           <div className='option'>
             <img src={paperIcon} alt='paper-hand' />

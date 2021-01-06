@@ -8,13 +8,12 @@ html {
 
 .container {
   display: flex;
-  flex: 1;
   height: 100%;
   flex-direction: column;
   align-items: center;
 }
 
-//? HEADER STYLES
+//* HEADER
 
 header {
   display: flex;
@@ -24,13 +23,13 @@ header {
   max-width: 600px;
   border: 2px solid hsl(217, 16%, 45%);
   border-radius: 10px;
-  padding: 10px 30px;
+  padding: 8px 12px 8px 20px;
 }
 
 .title {
   color: white;
   line-height: 4px;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 700;
 }
 
@@ -52,14 +51,23 @@ header {
   letter-spacing: 2px;
 }
 
-//? OPTIONS - ROCK/PAPER/SCISSORS ETC
-
+//* OPTIONS - ROCK/PAPER/SCISSORS ETC
+.options {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 500px;
+  border: 3px solid white;
+  margin: 20px;
+}
 .option-border {
-  margin: 4em;
+  margin: 2em;
   max-width: 200px;
   max-height: 200px;
   border-radius: 50%;
-  padding: 1em;
+  padding: 1.2em;
   position: relative;
 }
 
@@ -87,21 +95,43 @@ header {
 .scissors {
   background: linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
 }
-//? MEDIA QUERIES
 
-@media (min-width: 300px) {
+//triangle backgground shape
+.triangle-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//* MEDIA QUERIES
+
+@media (max-width: 540px) {
   html {
-    font-size: 1em;
+    font-size: 0.8em;
   }
   header {
     width: 75vw;
     font-size: 0.8em;
   }
-}
+  .options {
+    width: 90vw;
+    max-width: 340px;
+  }
+  .option {
+    padding: 1.3em;
+  }
+  .option-border {
+    margin: 0.5em;
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .triangle {
+    width: 70%;
+  }
 
-@media (min-width: 500px) {
-  header {
-    width: 80vw;
-    font-size: 1em;
+  .score-box {
+    padding: 4px 20px;
+    font-size: 1.2em;
   }
 }
