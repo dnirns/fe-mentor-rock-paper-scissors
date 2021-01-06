@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
 .modal {
-  display: none;
+  // display: block;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -10,9 +12,28 @@
 }
 
 .modal-content {
+  line-height: 0px;
+  color: hsl(229, 25%, 31%);
+  font-family: 'Barlow Semi Condensed', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rules-modal {
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.rules-modal > img {
+  padding: 50px 20px 10px 20px;
 }

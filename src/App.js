@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import Modal from './components/Modal'
 
 import rockIcon from './assets/icon-rock.svg'
@@ -5,12 +7,24 @@ import paperIcon from './assets/icon-paper.svg'
 import scissorsIcon from './assets/icon-scissors.svg'
 import bgTriangle from './assets/bg-triangle.svg'
 
-
-
 const App = () => {
+  const [modal, setModal] = useState(false)
+
+  const handleOpenModal = () => {
+    setModal(true)
+  }
+  const handleCloseModal = () => {
+    setModal(false)
+    console.log('close being clicked')
+  }
+
   return (
     <div className='container'>
-      <Modal />
+      <Modal
+        openModal={handleOpenModal}
+        closeModal={handleCloseModal}
+        isModalOpen={modal}
+      />
       <header>
         <div className='title'>
           <h1>ROCK</h1>
@@ -47,7 +61,7 @@ const App = () => {
       </div>
 
       <div className='button-container'>
-        <div className='button rules'>
+        <div className='button rules' onClick={handleOpenModal}>
           <h3>RULES</h3>
         </div>
       </div>
