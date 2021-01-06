@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import rockIcon from './assets/icon-rock.svg'
+import paperIcon from './assets/icon-paper.svg'
+import scissorsIcon from './assets/icon-scissors.svg'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='container'>
+      <header>
+        <div className='title'>
+          <h1>ROCK</h1>
+          <h1>PAPER</h1>
+          <h1>SCISSORS</h1>
+        </div>
+        <div className='score-box'>
+          <p className='score-text'>SCORE</p>
+          <h1 className='score'>12</h1>
+        </div>
       </header>
+
+      <div className='options'>
+        <div className='option-border paper'>
+          <div className='option'>
+            <img src={paperIcon} alt='paper-hand' />
+          </div>
+        </div>
+
+        <div className='option-border scissors'>
+          <div className='option'>
+            <img src={scissorsIcon} alt='paper-scissors' />
+          </div>
+        </div>
+
+        <div className='option-border rock'>
+          <div className='option'>
+            <img src={rockIcon} alt='rock-hand' />
+          </div>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
