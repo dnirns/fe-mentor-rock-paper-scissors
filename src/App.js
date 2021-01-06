@@ -1,11 +1,16 @@
+import Modal from './components/Modal'
+
 import rockIcon from './assets/icon-rock.svg'
 import paperIcon from './assets/icon-paper.svg'
 import scissorsIcon from './assets/icon-scissors.svg'
 import bgTriangle from './assets/bg-triangle.svg'
 
+
+
 const App = () => {
   return (
     <div className='container'>
+      <Modal />
       <header>
         <div className='title'>
           <h1>ROCK</h1>

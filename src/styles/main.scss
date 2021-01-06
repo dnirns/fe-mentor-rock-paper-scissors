@@ -1,3 +1,5 @@
+@import 'modal';
+
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 
 html {
@@ -120,6 +122,11 @@ header {
   letter-spacing: 4px;
   padding: 5px 30px;
   line-height: 2px;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: .7;
 }
 
 //* MEDIA QUERIES
