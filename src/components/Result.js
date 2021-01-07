@@ -30,12 +30,10 @@ const Result = ({ userChoice, computerChoice }) => {
     pickUserIcon()
   })
 
-  console.log(computerChoice)
-
   return (
     <div className='options'>
       <div className='result'>
-        <h3>YOU PICKED</h3>
+        <h5>YOU PICKED</h5>
         <div className={`option-border ${userChoice}`}>
           <div className='option'>
             <img src={userIcon} alt='paper-hand' />
@@ -43,7 +41,7 @@ const Result = ({ userChoice, computerChoice }) => {
         </div>
       </div>
       <div className='result'>
-        <h3>COMPUTER PICKED</h3>
+        <h5>THE HOUSE PICKED</h5>
         <div className={`option-border ${computerChoice}`}>
           <div className='option'>
             <img src={compIcon} alt='paper-scissors' />

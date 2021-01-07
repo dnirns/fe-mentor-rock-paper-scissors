@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Modal from './components/Modal'
 import Options from './components/Options'
 import Result from './components/Result'
+import Button from './components/Button'
 
 const App = () => {
   const [modal, setModal] = useState(false)
@@ -12,18 +13,21 @@ const App = () => {
 
   const handleOpenModal = () => {
     setModal(true)
-    console.log('Modal Opened')
   }
   const handleCloseModal = () => {
     setModal(false)
-    console.log('Modal Closed')
+  }
+
+  const handleComputerChoice = () => {
+    const choices = ['rock', 'paper', 'scissors']
+    setComputerChoice(choices[Math.floor(Math.random() * choices.length)])
+
   }
 
   const handleUserChoice = (choice) => {
     setUserChoice(choice)
-    console.log(choice)
+    handleComputerChoice()
     setScore(0)
-    setComputerChoice(null)
   }
 
   return (
@@ -43,11 +47,8 @@ const App = () => {
       {userChoice && (
         <Result computerChoice={computerChoice} userChoice={userChoice} />
       )}
-      <div className='button-container'>
-        <div className='button rules' onClick={handleOpenModal}>
-          <h3>RULES</h3>
-        </div>
-      </div>
+
+      <Button openModal={handleOpenModal} title='RULES' />
     </div>
   )
 }

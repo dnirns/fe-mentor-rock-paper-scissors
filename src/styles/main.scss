@@ -79,7 +79,7 @@ header {
   cursor: pointer;
 }
 .option-border:active {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .option {
@@ -101,6 +101,13 @@ header {
   background: $scissors-gradient;
 }
 
+//RESULT
+
+.result {
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 1.2em;
+}
 //triangle background shape
 .triangle-container {
   position: absolute;
@@ -146,7 +153,7 @@ header {
     min-width: 270px;
   }
   .option {
-    padding: 1.3em;
+    padding: 1.1em;
   }
   .option-border {
     margin: 0.5em;
@@ -160,6 +167,10 @@ header {
   .score-box {
     padding: 4px 20px;
     font-size: 1.2em;
+  }
+  .result {
+    font-size: 1em;
+    letter-spacing: 2px;
   }
 }
 
