@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Button from './Button'
+
 import rockIcon from '../assets/icon-rock.svg'
 import paperIcon from '../assets/icon-paper.svg'
 import scissorsIcon from '../assets/icon-scissors.svg'
