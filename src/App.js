@@ -7,7 +7,8 @@ import Result from './components/Result'
 const App = () => {
   const [modal, setModal] = useState(false)
   const [score, setScore] = useState(0)
-  const [userChoice, setUserChoice] = useState('')
+  const [userChoice, setUserChoice] = useState(null)
+  const [computerChoice, setComputerChoice] = useState(null)
 
   const handleOpenModal = () => {
     setModal(true)
@@ -31,9 +32,15 @@ const App = () => {
         isModalOpen={modal}
       />
 
-      <Header score={score} />
-      {/* <Options userChoice={handleUserChoice} /> */}
-      <Result />
+      <Header
+        score={score}
+        userChoice={userChoice}
+        computerChoice={computerChoice}
+      />
+      {!userChoice && <Options userChoice={handleUserChoice} />}
+      {userChoice && (
+        <Result computerChoice={computerChoice} userChoice={userChoice} />
+      )}
       <div className='button-container'>
         <div className='button rules' onClick={handleOpenModal}>
           <h3>RULES</h3>
