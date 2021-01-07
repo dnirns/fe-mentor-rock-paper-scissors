@@ -22,6 +22,8 @@ const App = () => {
   const handleUserChoice = (choice) => {
     setUserChoice(choice)
     console.log(choice)
+    setScore(0)
+    setComputerChoice(null)
   }
 
   return (
