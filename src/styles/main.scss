@@ -1,11 +1,12 @@
 @import 'modal';
+@import 'colors';
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 
 html {
   font-family: 'Barlow Semi Condensed', sans-serif;
   min-height: 100vh;
-  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background: $background-color;
   color: white;
 }
 
@@ -26,7 +27,7 @@ header {
   align-items: center;
   width: 60vw;
   max-width: 600px;
-  border: 2px solid hsl(217, 16%, 45%);
+  border: 2px solid $header-border-color;
   border-radius: 10px;
   padding: 8px 12px 8px 20px;
 }
@@ -47,16 +48,16 @@ header {
 }
 
 .score {
-  color: hsl(229, 25%, 31%);
+  color: $score-color;
   font-size: 3.2em;
   font-weight: 700;
 }
 .score-text {
-  color: hsl(229, 64%, 46%);
+  color: $score-text;
   letter-spacing: 2px;
 }
 
-//* OPTIONS - ROCK/PAPER/SCISSORS ETC
+//OPTIONS - ROCK/PAPER/SCISSORS ETC
 .options {
   position: relative;
   display: flex;
@@ -74,6 +75,12 @@ header {
   padding: 1.2em;
   position: relative;
 }
+.option-border:hover {
+  cursor: pointer;
+}
+.option-border:active {
+  opacity: .8;
+}
 
 .option {
   background: white;
@@ -84,22 +91,14 @@ header {
 }
 
 .rock {
-  background: linear-gradient(
-    to bottom,
-    hsl(349, 71%, 52%),
-    hsl(349, 70%, 56%)
-  );
+  background: $rock-gradient;
 }
 .paper {
-  background: linear-gradient(
-    to bottom,
-    hsl(230, 89%, 62%),
-    hsl(230, 89%, 65%)
-  );
+  background: $paper-gradient;
 }
 
 .scissors {
-  background: linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  background: $scissors-gradient;
 }
 
 //triangle background shape
@@ -110,7 +109,7 @@ header {
   justify-content: center;
 }
 
-//* BUTTONS
+// BUTTONS
 .button-container {
   align-self: flex-end;
   margin: 10px 40px;
@@ -131,7 +130,7 @@ header {
   opacity: 0.7;
 }
 
-//* MEDIA QUERIES
+// MEDIA QUERIES
 
 @media (max-width: 540px) {
   html {

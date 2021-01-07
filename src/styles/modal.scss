@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+@import 'colors';
 
 .modal {
   position: fixed;
@@ -12,7 +13,7 @@
 
 .modal-content {
   line-height: 0px;
-  color: hsl(229, 25%, 31%);
+  color: $score-color;
   font-family: 'Barlow Semi Condensed', sans-serif;
   display: flex;
   flex-direction: column;
@@ -63,7 +64,7 @@
   }
 }
 
-//? modal animation
+// modal fade in animation
 
 @keyframes fadeInModal {
   0% {
