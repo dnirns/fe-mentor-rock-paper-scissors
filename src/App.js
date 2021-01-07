@@ -9,7 +9,7 @@ const App = () => {
   const [modal, setModal] = useState(false)
   const [score, setScore] = useState(0)
   const [userChoice, setUserChoice] = useState(null)
-  const [computerChoice, setComputerChoice] = useState(null)
+  const [compChoice, setCompChoice] = useState(null)
 
   const handleOpenModal = () => {
     setModal(true)
@@ -18,16 +18,20 @@ const App = () => {
     setModal(false)
   }
 
-  const handleComputerChoice = () => {
+  const handleCompChoice = () => {
     const choices = ['rock', 'paper', 'scissors']
-    setComputerChoice(choices[Math.floor(Math.random() * choices.length)])
-
+    setCompChoice(choices[Math.floor(Math.random() * choices.length)])
   }
 
   const handleUserChoice = (choice) => {
     setUserChoice(choice)
-    handleComputerChoice()
+    handleCompChoice()
     setScore(0)
+  }
+
+  const handleReset = () => {
+    setCompChoice(null)
+    setUserChoice(null)
   }
 
   return (
@@ -38,17 +42,17 @@ const App = () => {
         isModalOpen={modal}
       />
 
-      <Header
-        score={score}
-        userChoice={userChoice}
-        computerChoice={computerChoice}
-      />
+      <Header score={score} />
       {!userChoice && <Options userChoice={handleUserChoice} />}
       {userChoice && (
-        <Result computerChoice={computerChoice} userChoice={userChoice} />
+        <Result
+          compChoice={compChoice}
+          userChoice={userChoice}
+          playAgain={handleReset}
+        />
       )}
 
-      <Button openModal={handleOpenModal} title='RULES' />
+      <Button buttonAction={handleOpenModal} title='RULES' />
     </div>
   )
 }

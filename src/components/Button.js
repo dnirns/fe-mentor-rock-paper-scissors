@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Button = ({ openModal, title }) => {
+const Button = ({ buttonAction, title }) => {
   return (
     <div className='button-container'>
-      <div className='button rules' onClick={openModal}>
+      <div className='button rules' onClick={buttonAction}>
         <h3>{title}</h3>
       </div>
     </div>
