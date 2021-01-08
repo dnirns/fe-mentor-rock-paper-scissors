@@ -1,13 +1,14 @@
 # Frontend Mentor Challenge - Rock, Paper, Scissors
 
-
 ### My attempt at the Frontend Mentor 'Rock Paper Scissors Spock' challenge.
 
 [WIP Deployment Link](https://fe-mentor-rock-paper-scissors.vercel.app/)
 
+Extras added:
+
+- Redux for state management and local storage of a running score.
+
 The original brief from Frontend Mentor is below:
-
-
 
 ## The challenge
 
