@@ -7,9 +7,13 @@ const reducer = combineReducers({
   score: scoreReducer,
 })
 
+const scoreFromStorage = localStorage.getItem('score')
+  ? JSON.parse(localStorage.getItem('score'))
+  : 0
+
 const initialState = {
   score: {
-    score: 0,
+    score: scoreFromStorage,
   },
 }
 

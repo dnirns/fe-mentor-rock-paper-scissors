@@ -2,6 +2,7 @@ import { INCREASE_SCORE, DECREASE_SCORE } from '../constants/scoreConstants'
 
 export const increaseScore = (dispatch, state) => {
   dispatch({ type: INCREASE_SCORE, payload: state().score.score + 1 })
+  localStorage.setItem('score', state().score.score)
 }
 
 export const decreaseScore = (dispatch, state) => {
@@ -9,4 +10,5 @@ export const decreaseScore = (dispatch, state) => {
     type: DECREASE_SCORE,
     payload: state().score.score - 1,
   })
+  localStorage.setItem('score', state().score.score)
 }
