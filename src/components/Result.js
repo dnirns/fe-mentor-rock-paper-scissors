@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-
+import { useDispatch } from 'react-redux'
+import { increaseScore, decreaseScore } from '../actions/scoreActions'
 import rockIcon from '../assets/icon-rock.svg'
 import paperIcon from '../assets/icon-paper.svg'
 import scissorsIcon from '../assets/icon-scissors.svg'
@@ -11,6 +12,8 @@ const Result = ({ userChoice, compChoice, playAgain }) => {
 
   const winnerMsg = 'YOU WON'
   const loserMsg = 'YOU LOSE'
+
+  const dispatch = useDispatch()
 
   useEffect(() => {
     const getWinner = () => {
@@ -54,7 +57,6 @@ const Result = ({ userChoice, compChoice, playAgain }) => {
   return (
     <>
       <div className='results'>
-        {/* <div className='options'> */}
         <div className='result'>
           <h5>YOU PICKED</h5>
           <div className={`option-border ${userChoice}`}>
@@ -77,8 +79,6 @@ const Result = ({ userChoice, compChoice, playAgain }) => {
             </div>
           </div>
         </div>
-
-        {/* </div> */}
       </div>
       <div className='winner-mobile'>
         <h1 style={{ fontSize: '3em' }}>{winner}</h1>
@@ -86,6 +86,8 @@ const Result = ({ userChoice, compChoice, playAgain }) => {
           <h4>PLAY AGAIN</h4>
         </div>
       </div>
+      <button onClick={() => dispatch(increaseScore)}>INCREASE</button>
+      <button onClick={() => dispatch(decreaseScore)}>DECREASE</button>
     </>
   )
 }

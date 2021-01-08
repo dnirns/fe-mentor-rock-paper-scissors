@@ -4,12 +4,14 @@ import Modal from './components/Modal'
 import Options from './components/Options'
 import Result from './components/Result'
 import Button from './components/Button'
+import { useSelector } from 'react-redux'
 
 const App = () => {
   const [modal, setModal] = useState(false)
-  const [score, setScore] = useState(0)
   const [userChoice, setUserChoice] = useState(null)
   const [compChoice, setCompChoice] = useState(null)
+
+  const score = useSelector((state) => state.score.score)
 
   const handleOpenModal = () => {
     setModal(true)
@@ -26,7 +28,6 @@ const App = () => {
   const handleUserChoice = (choice) => {
     setUserChoice(choice)
     handleCompChoice()
-    setScore(0)
   }
 
   const handleReset = () => {
