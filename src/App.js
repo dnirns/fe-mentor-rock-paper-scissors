@@ -9,7 +9,6 @@ import Header from './components/Header'
 import Modal from './components/Modal'
 import Options from './components/Options'
 import Result from './components/Result'
-import Button from './components/Button'
 import { useSelector } from 'react-redux'
 
 const App = () => {
