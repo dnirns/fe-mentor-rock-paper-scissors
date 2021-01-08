@@ -1,35 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { increaseScore, decreaseScore } from '../actions/scoreActions'
+
+
 import rockIcon from '../assets/icon-rock.svg'
 import paperIcon from '../assets/icon-paper.svg'
 import scissorsIcon from '../assets/icon-scissors.svg'
 
-const Result = ({ userChoice, compChoice, playAgain }) => {
+const Result = ({ userChoice, compChoice, playAgain, winner }) => {
   const [userIcon, setUserIcon] = useState(null)
   const [compIcon, setCompIcon] = useState(null)
-  const [winner, setWinner] = useState('')
-
-  const winnerMsg = 'YOU WON'
-  const loserMsg = 'YOU LOSE'
-
-  const dispatch = useDispatch()
 
   useEffect(() => {
-    const getWinner = () => {
-      if (userChoice === compChoice) {
-        setWinner('DRAW')
-      } else if (userChoice === 'rock' && compChoice === 'scissors') {
-        setWinner(winnerMsg)
-      } else if (userChoice === 'scissors' && compChoice === 'paper') {
-        setWinner(winnerMsg)
-      } else if (userChoice === 'paper' && compChoice === 'rock') {
-        setWinner(winnerMsg)
-      } else {
-        setWinner(loserMsg)
-      }
-    }
-
     const pickUserIcon = () => {
       if (userChoice === 'rock') {
         setUserIcon(rockIcon)
@@ -51,14 +31,13 @@ const Result = ({ userChoice, compChoice, playAgain }) => {
     }
     pickCompIcon()
     pickUserIcon()
-    getWinner()
   })
 
   return (
     <>
       <div className='results'>
         <div className='result'>
-          <h5>YOU PICKED</h5>
+          <h4>YOU PICKED</h4>
           <div className={`option-border ${userChoice}`}>
             <div className='option'>
               <img src={userIcon} alt='paper-hand' />
@@ -86,8 +65,6 @@ const Result = ({ userChoice, compChoice, playAgain }) => {
           <h4>PLAY AGAIN</h4>
         </div>
       </div>
-      <button onClick={() => dispatch(increaseScore)}>INCREASE</button>
-      <button onClick={() => dispatch(decreaseScore)}>DECREASE</button>
     </>
   )
 }

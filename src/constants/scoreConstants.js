@@ -1,2 +1,3 @@
 export const INCREASE_SCORE = 'INCREASE_SCORE'
 export const DECREASE_SCORE = 'DECREASE_SCORE'
+export const RESET_SCORE = 'RESET_SCORE'

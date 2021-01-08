@@ -65,7 +65,8 @@ header {
   justify-content: space-evenly;
   align-items: center;
   width: 500px;
-  margin: 20px;
+  height: 450px;
+  // margin: 20px;
 }
 .option-border {
   margin: 2em;
@@ -106,7 +107,8 @@ header {
 .results {
   display: flex;
   align-items: center;
-  // justify-content: space-evenly;
+  justify-content: space-evenly;
+  height: 450px;
 }
 
 .result {
@@ -141,17 +143,17 @@ header {
   bottom: 20px;
 }
 .button {
+  text-align: center;
   font-weight: 600;
   border: 2px solid white;
   border-radius: 10px;
   letter-spacing: 4px;
-  padding: 5px 30px;
-  line-height: 2px;
+  padding: 0px 30px;
+  margin: 15px 0px;
 }
 
 .button:hover {
   cursor: pointer;
-  // opacity: 0.7;
   color: rgb(230, 145, 159);
   border: 2px solid rgba(255, 255, 255, 0.66);
 }
@@ -194,6 +196,9 @@ header {
   .result {
     font-size: 1em;
     letter-spacing: 2px;
+  }
+  .results {
+    height: auto;
   }
   .winner-desktop {
     display: none;
