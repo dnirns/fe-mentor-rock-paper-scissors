@@ -81,11 +81,13 @@ const App = () => {
 
       <div className='button-container'>
         <div className='button rules' onClick={handleOpenModal}>
-          <h3>RULES</h3>
+          <h5>RULES</h5>
         </div>
-        <div className='button' onClick={() => dispatch(resetScore)}>
-          <h4>RESET SCORE</h4>
-        </div>
+        {!userChoice && score !== 0 && (
+          <div className='button' onClick={() => dispatch(resetScore)}>
+            <h5>RESET SCORE</h5>
+          </div>
+        )}
       </div>
     </div>
   )

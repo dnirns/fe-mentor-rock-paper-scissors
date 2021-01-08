@@ -45,7 +45,7 @@ const Result = ({ userChoice, compChoice, playAgain, winner }) => {
         <div className='winner-desktop'>
           <h1 style={{ fontSize: '3em' }}>{winner}</h1>
           <div className='button play-again' onClick={playAgain}>
-            <h4>PLAY AGAIN</h4>
+            <h5>PLAY AGAIN</h5>
           </div>
         </div>
         <div className='result'>
@@ -60,7 +60,7 @@ const Result = ({ userChoice, compChoice, playAgain, winner }) => {
       <div className='winner-mobile'>
         <h1 style={{ fontSize: '3em' }}>{winner}</h1>
         <div className='button play-again' onClick={playAgain}>
-          <h4>PLAY AGAIN</h4>
+          <h5>PLAY AGAIN</h5>
         </div>
       </div>
     </>
