@@ -83,7 +83,7 @@ const App = () => {
         <div className='button rules' onClick={handleOpenModal}>
           <h5>RULES</h5>
         </div>
-        {!userChoice && score !== 0 && (
+        {score !== 0 && (
           <div className='button' onClick={() => dispatch(resetScore)}>
             <h5>RESET SCORE</h5>
           </div>
